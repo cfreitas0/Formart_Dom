@@ -30,7 +30,7 @@ body {
     border-radius: 10px;
     margin: 50px auto 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px; /* Largura padrão para desktops/telas maiores */
+    width: 290px; /* Largura padrão para desktops/telas maiores */
     height: 430px; /* Altura padrão */
     backdrop-filter: blur(2px);
     box-sizing: border-box; /* Garante que padding e border não adicionem à largura/altura total */
