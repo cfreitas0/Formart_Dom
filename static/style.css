@@ -1,88 +1,126 @@
 @charset "UTF-8";
 
+/* Estilos para o corpo (body) - Mantidos para centralização */
 body {
-            background-image: url(/static/fundo1.jpg);
-            font-family: Arial, sans-serif;
-            background-color: #050505;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(fundo1.jpg);
-            background-position: center;
-            
-        }
-
-        .login-container {
-            background: rgba(255, 255, 255, 0.103);
-            border: 2px solid #10828a;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 50px auto 20px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            height: 400px;
-            backdrop-filter: blur(2px);
-        }
-
-        h1 {
-            width: 100%;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 37px;
-            text-align: center;
-            background-color: #10828a;
-            color: #ffffff;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            color: #ffffff;
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input[type="text"],
-        .form-group input[type="password"] {
-            width: 100%;
-            height: 40px;
-            background: transparent;
-            border-bottom: 2px solid black ;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            color: #ffffff;
-            font-size: 20px;
-            letter-spacing: 2px;
-            padding: 10px;
-            border-radius: 5px;
-            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-        }
-
-        ::placeholder {
-            color: #ffffff;
-            font-family: Arial;
+    background-image: url(/static/fun.jpg); /* Este está sendo sobreposto, veja abaixo */
+    font-family: Arial, sans-serif;
+    background-color: #050505;
+    /* Configurações de layout Flexbox para centralizar o contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* O background final que combina gradiente e imagem */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(fundo1.jpg);
+    background-position: center;
+    background-size: cover; /* Adicionado: Garante que a imagem de fundo cubra toda a tela */
+    background-attachment: fixed; /* Adicionado: Opcional, mantém o fundo fixo ao rolar */
 }
 
-        .form-group button {
-            width: 100%;
-            padding: 10px;
-            background-color: #090c0c;
-            color: rgb(255, 255, 255);
-            border: none;
-            border-radius: 7px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.6s;
-        }
-        .form-group button:hover {
-            background-color: #10828a;
-        }
-        .error-message {
-            color: red;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+/* Estilos para o contêiner de login */
+.login-container {
+    background: rgba(255, 255, 255, 0.103);
+    border: 2px solid #10828a;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 50px auto 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Largura padrão para desktops/telas maiores */
+    height: 400px; /* Altura padrão */
+    backdrop-filter: blur(2px);
+    box-sizing: border-box; /* Garante que padding e border não adicionem à largura/altura total */
+}
+
+/* Título */
+h1 {
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 37px;
+    text-align: center;
+    background-color: #10828a;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Campos de Formulário e Botão - Mantidos */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-bottom: 2px solid black ;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+::placeholder {
+    color: #ffffff;
+    font-family: Arial;
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #090c0c;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.6s;
+}
+.form-group button:hover {
+    background-color: #10828a;
+}
+.error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ## Responsividade (Media Queries)                  */
+/* -------------------------------------------------------------------------- */
+
+/* Aplica estilos para telas menores (ex: celulares) com largura máxima de 600px */
+@media (max-width: 600px) {
+    
+    /* Ajusta o contêiner para ocupar mais espaço na tela do celular */
+    .login-container {
+        width: 90%; /* Ocupa 90% da largura da viewport */
+        max-width: 400px; /* Garante que não ultrapasse um tamanho confortável */
+        height: auto; /* Altura automática para se adaptar ao conteúdo */
+        padding: 20px; /* Reduz um pouco o padding interno */
+        margin: 20px auto; /* Ajusta a margem superior/inferior para melhor visualização */
+    }
+
+    /* Reduz o tamanho da fonte do título para se encaixar melhor */
+    h1 {
+        font-size: 30px;
+        padding: 8px;
+    }
+
+    /* Ajustes menores para campos de input em telas muito pequenas, se necessário */
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+}
