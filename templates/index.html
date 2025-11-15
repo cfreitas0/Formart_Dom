@@ -5,23 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formatador de Dados</title>
     <style>
-        body { font-family: sans-serif; margin: 20px; background-color: #f9f9f9; }
-        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .header h1 { margin: 0; }
-        .header a { text-decoration: none; background: #e0e0e0; color: #333; padding: 8px 12px; border-radius: 4px; font-size: 14px; }
-        .header a:hover { background: #d0d0d0; }
+    /* Estilos Globais e Responsividade Básica */
+    body {
+        font-family: sans-serif;
+        margin: 0; /* Remove a margem padrão para usar 100% da viewport */
+        background-color: #f9f9f9;
         
-        form { margin-top: 20px; }
-        input[type="file"] { display: block; margin-bottom: 15px; }
-        input[type="submit"] { background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
-        input[type="submit"]:hover { background-color: #218838; }
+        /* Centralização Vertical e Horizontal (Técnica Flexbox) */
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+        
+        /* Placeholder para Imagem de Fundo e Cor Padrão */
+        background-color: #f0f0f5; /* Cor de fundo suave */
+        /* background-image: url('caminho/para/sua/imagem.jpg'); */
+        /* background-size: cover; */
+        /* background-position: center; */
+    }
 
-        /* Estilos para as mensagens 'flash' */
-        .alert { padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; }
-        .alert-danger { color: #a94442; background-color: #f2dede; border-color: #ebccd1; }
-        .alert-warning { color: #8a6d3b; background-color: #fcf8e3; border-color: #faebcc; }
-    </style>
+    /* Container Principal */
+    .container {
+        max-width: 600px; /* Mantém a largura máxima padrão */
+        width: 90%; /* Ocupa 90% da largura em telas menores para responsividade */
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais visível */
+        box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
+    }
+
+    /* Cabeçalho */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    .header h1 { 
+        margin: 0; 
+        color: #007bff; /* Cor do título em azul (padrão do formatador) */
+    }
+    .header a { 
+        text-decoration: none; 
+        background: #007bff; /* Fundo do link azul (padrão do formatador) */
+        color: #ffffff; /* Texto branco */
+        padding: 8px 12px; 
+        border-radius: 4px; 
+        font-size: 14px; 
+        transition: background-color 0.3s;
+    }
+    .header a:hover { 
+        background: #0056b3; /* Azul mais escuro no hover */
+    }
+    
+    /* Formulário e Campos */
+    form { 
+        margin-top: 20px; 
+    }
+    input[type="file"] { 
+        display: block; 
+        margin-bottom: 15px;
+        padding: 8px; /* Adiciona um padding leve */
+        border: 1px solid #ccc; /* Borda sutil */
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    input[type="submit"] { 
+        background-color: #28a745; 
+        color: white; 
+        padding: 10px 15px; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        font-size: 16px; 
+        width: 100%; /* Botão com 100% de largura */
+        box-sizing: border-box;
+        transition: background-color 0.3s;
+    }
+    input[type="submit"]:hover { 
+        background-color: #218838; 
+    }
+
+    /* Estilos para as mensagens 'flash' - Mantidos */
+    .alert { padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; }
+    .alert-danger { color: #a94442; background-color: #f2dede; border-color: #ebccd1; }
+    .alert-warning { color: #8a6d3b; background-color: #fcf8e3; border-color: #faebcc; }
+</style>
 </head>
 <body>
 
