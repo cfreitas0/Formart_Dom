@@ -90,11 +90,11 @@ def login():
         if username == USUARIO_VALIDO and password == SENHA_VALIDA:
             # Credenciais corretas: armazena na sessão
             session['logged_in'] = True
-            flash('Login realizado com sucesso!', 'success') # Mensagem de sucesso
+            flash('', 'success') # Mensagem de sucesso
             return redirect(url_for('index'))
         else:
             # Credenciais erradas: exibe erro
-            flash('Usuário ou senha inválidos. Tente novamente.', 'danger')
+            flash('', 'danger')
             
     # Se for GET ou se o login falhar, exibe a página de login
     return render_template('login.html')
@@ -123,14 +123,14 @@ def index():
     if request.method == 'POST':
         # Verifica se o arquivo foi incluído no request
         if 'arquivo_dados' not in request.files:
-            flash("Nenhum arquivo enviado.", "danger")
+            flash("", "danger")
             return redirect(request.url) # Recarrega a página
 
         arquivo = request.files['arquivo_dados']
 
         # Verifica se o nome do arquivo está vazio
         if arquivo.filename == '':
-            flash("Nenhum arquivo selecionado.", "warning")
+            flash("", "warning")
             return redirect(request.url)
         
         # Opcional: Verifica a extensão
