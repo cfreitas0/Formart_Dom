@@ -16,24 +16,31 @@ body {
 
         .login-container {
             background: rgba(255, 255, 255, 0.103);
-            border: 1px solid rgba(255, 255, 255, 0.582);
+            border: 2px solid #10828a;
             padding: 25px;
             border-radius: 10px;
             margin: 50px auto 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            backdrop-filter: blur(1px);
+            width: 350px;
+            height: 400px;
+            backdrop-filter: blur(2px);
         }
 
-        h2 {
+        h1 {
+            width: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 37px;
             text-align: center;
-            color: #741717;
-            margin-bottom: 20px;
+            background-color: #10828a;
+            color: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         .form-group {
             margin-bottom: 15px;
         }
         .form-group label {
+            color: #ffffff;
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
@@ -41,23 +48,38 @@ body {
         .form-group input[type="text"],
         .form-group input[type="password"] {
             width: 100%;
+            height: 40px;
+            background: transparent;
+            border-bottom: 2px solid black ;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: #ffffff;
+            font-size: 20px;
+            letter-spacing: 2px;
             padding: 10px;
-            border: 1px solid #807777;
             border-radius: 5px;
             box-sizing: border-box; /* Garante que o padding não aumente a largura total */
         }
+
+        ::placeholder {
+            color: #ffffff;
+            font-family: Arial;
+}
+
         .form-group button {
             width: 100%;
             padding: 10px;
-            background-color: #587ba0;
-            color: white;
+            background-color: #090c0c;
+            color: rgb(255, 255, 255);
             border: none;
-            border-radius: 4px;
+            border-radius: 7px;
             cursor: pointer;
             font-size: 16px;
+            transition: 0.6s;
         }
         .form-group button:hover {
-            background-color: #0056b3;
+            background-color: #10828a;
         }
         .error-message {
             color: red;
