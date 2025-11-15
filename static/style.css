@@ -22,7 +22,6 @@ body {
             margin: 50px auto 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 300px;
-            height: 420px;
             backdrop-filter: blur(1px);
         }
 
@@ -43,8 +42,8 @@ body {
         .form-group input[type="password"] {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 1px solid #807777;
+            border-radius: 5px;
             box-sizing: border-box; /* Garante que o padding não aumente a largura total */
         }
         .form-group button {
