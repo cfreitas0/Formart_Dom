@@ -6,7 +6,7 @@
 }
 /* Estilos para o corpo (body) - Mantidos para centralização */
 body {
-    background-image: url(/static/fun.jpg); /* Este está sendo sobreposto, veja abaixo */
+    background-image: url(/static/fundo1.jpg); /* Este está sendo sobreposto, veja abaixo */
     font-family: Arial, sans-serif;
     background-color: #050505;
     /* Configurações de layout Flexbox para centralizar o contêiner */
