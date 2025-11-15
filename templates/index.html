@@ -9,7 +9,6 @@
     body {
         font-family: sans-serif;
         margin: 0; /* Remove a margem padrão para usar 100% da viewport */
-        background-color: #f9f9f9;
         
         /* Centralização Vertical e Horizontal (Técnica Flexbox) */
         display: flex;
@@ -19,19 +18,21 @@
         
         /* Placeholder para Imagem de Fundo e Cor Padrão */
         background-color: #f0f0f5; /* Cor de fundo suave */
-        /* background-image: url('caminho/para/sua/imagem.jpg'); */
-        /* background-size: cover; */
-        /* background-position: center; */
+        background-image: url('/static/uFHUrB.png'); 
+        background-size: cover; 
+        background-position: center; 
     }
 
     /* Container Principal */
     .container {
         max-width: 600px; /* Mantém a largura máxima padrão */
         width: 90%; /* Ocupa 90% da largura em telas menores para responsividade */
-        background: #fff;
+        background:rgba(255, 255, 255, 0.068);
         padding: 20px;
-        border-radius: 8px;
+        border: 2px solid #218837b6;
+        border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais visível */
+        backdrop-filter: blur(4px); 
         box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
     }
 
@@ -40,24 +41,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
+        border-bottom: 2px solid #158b42;
+        padding-bottom: 22px;
     }
     .header h1 { 
         margin: 0; 
-        color: #007bff; /* Cor do título em azul (padrão do formatador) */
+        color: #fbfcfdda; /* Cor do título em azul (padrão do formatador) */
     }
     .header a { 
         text-decoration: none; 
-        background: #007bff; /* Fundo do link azul (padrão do formatador) */
-        color: #ffffff; /* Texto branco */
+        background: #10922c; /* Fundo do link azul (padrão do formatador) */
+        color: #fffffffb; /* Texto branco */
         padding: 8px 12px; 
-        border-radius: 4px; 
+        border-radius: 9px; 
         font-size: 14px; 
         transition: background-color 0.3s;
     }
     .header a:hover { 
-        background: #0056b3; /* Azul mais escuro no hover */
+        background: #1a7946; /* Azul mais escuro no hover */
     }
     
     /* Formulário e Campos */
@@ -68,13 +69,13 @@
         display: block; 
         margin-bottom: 15px;
         padding: 8px; /* Adiciona um padding leve */
-        border: 1px solid #ccc; /* Borda sutil */
+        border: 1px solid #10922c; /* Borda sutil */
         border-radius: 4px;
         width: 100%;
         box-sizing: border-box;
     }
     input[type="submit"] { 
-        background-color: #28a745; 
+        background-color: #10922c; 
         color: white; 
         padding: 10px 15px; 
         border: none; 
@@ -86,8 +87,10 @@
         transition: background-color 0.3s;
     }
     input[type="submit"]:hover { 
-        background-color: #218838; 
+        background-color: #175725ec; 
     }
+
+    
 
     /* Estilos para as mensagens 'flash' - Mantidos */
     .alert { padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; }
