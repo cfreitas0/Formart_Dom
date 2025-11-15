@@ -16,7 +16,7 @@ body {
     height: 100vh;
     margin: 0;
     /* O background final que combina gradiente e imagem */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.959) 50%), url(fundo1.jpg);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 50%), url(fundo1.jpg);
     background-position: center;
     background-size: cover; /* Adicionado: Garante que a imagem de fundo cubra toda a tela */
     background-attachment: fixed; /* Adicionado: Opcional, mantém o fundo fixo ao rolar */
