@@ -30,6 +30,7 @@
         background:rgba(255, 255, 255, 0.068);
         padding: 20px;
         border: 2px solid #218837b6;
+        text-align: center;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais visível */
         backdrop-filter: blur(4px); 
@@ -90,7 +91,7 @@
         background-color: #175725ec; 
     }
 
-    
+
 
     /* Estilos para as mensagens 'flash' - Mantidos */
     .alert { padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; }
@@ -102,7 +103,7 @@
 
     <div class="container">
         <div class="header">
-            <h1>Formatador de Arquivos</h1>
+            <h1>Formatador TXT</h1>
             <a href="{{ url_for('logout') }}">Sair</a>
         </div>
 
@@ -114,7 +115,7 @@
           {% endif %}
         {% endwith %}
         <form method="POST" enctype="multipart/form-data">
-            <label for="arquivo_dados">Selecione um arquivo .txt:</label>
+            <label for="arquivo_dados"><span style="color: #fbfcfdda; font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Selecione um arquivo .txt:</span></label>
             <input type="file" id="arquivo_dados" name="arquivo_dados" accept=".txt">
             <input type="submit" value="Processar e Baixar">
         </form>
